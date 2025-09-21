@@ -1,0 +1,243 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #1a1a2e, transparent 40%),
+              radial-gradient(circle at 80% 30%, #16213e, transparent 40%),
+              radial-gradient(circle at 50% 80%, #0f3460, transparent 40%),
+              #000; /* Base black */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(41, 8, 111);
+}
+
+
+.container{
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    }
+.to-doapp{
+    width: 100%;
+    max-width: 550px;
+    background: #8996b5;
+    margin: 100px auto 20px;
+    padding: 30px 40px 70px;
+    border-radius: 10px;
+
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    background: #c8b8b855;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    font-size: 16px;
+    cursor: pointer ;
+    color: aliceblue;
+    background-color: rgba(13, 1, 35, 0.725);
+    border-radius: 40px;
+}
+ul li{
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul li::before{
+content: '';
+position: absolute;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background-size: cover;
+transform: translateY(-0%); /* Centers the circle vertically */
+background-image: url(../images/unchecked.png);
+background-position: center;
+top: 12px;
+left: 8px;
+
+}
+ul li.checked{
+    color : #555;
+    text-decoration: line-through;
+}
+ul li.checked ::before{
+    background-image: url(../images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    height: 40px;
+   top : 5px;
+   width: 40px;
+   font-size: 22px;
+   color:#555;
+   line-height: 40px;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 50%;
+}
+
+ul li span:hover{
+background-color: #c8b8b855;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav , .nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content:space-around ;
+    align-items: center;
+    height: 17vh ;}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+font-size: 1.5rem;}
+
+a{
+    color: rgb(74, 151, 176);
+    text-decoration: none;
+    text-decoration-color: rgb(213, 205, 205) ;
+}
+
+ a:hover{
+    color: rgb(74 , 151 ,176);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(74 , 151 , 176) ;
+}
+
+
+.landing {
+      text-align: center;
+      font-size: 3rem;
+      padding: 100px 20px;
+     
+      color: #fff;
+    }
+    .landing button {
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 30px;
+      border: none;
+      background-color: rgba(13, 198, 235, 0.725);
+      color: #fff;
+    }
+
+    /* Modals */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-content input {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+    }
+
+    .modal-content button {
+      margin-top: 10px;
+      padding: 10px 25px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      background-color: rgba(108, 132, 250, 0.8);
+      color: #fff;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    h1{
+        padding: 20px 20px 20px 20px;
+        margin: 20px 20px 20px 20px ;
+        color: rgba(39, 122, 160, 0.863);
+        font-size: 6rem;
+    }
+
+    p{
+        padding: 20px 20px 20px 20px;
+        margin: 20px 20px 20px 20px ;
+        color: rgb(201, 201, 201);
+        font-size: 4rem;
+    }
+
+
+    .landing h1,
+.landing p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.landing p {
+  animation-delay: 0.5s; /* paragraph appears after heading */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    /* To-Do Section */
+    

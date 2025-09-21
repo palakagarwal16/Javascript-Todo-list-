@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+
+
+
+
+  <!-- Landing Page -->
+  <section id="home" class="landing">
+    <h1 id = "typing"></h1>
+    <p>Organize your tasks easily and efficiently.</p>
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Sign Up</button>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button id="loginSubmit">Login</button>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSignup">&times;</span>
+      <h2>Sign Up</h2>
+      <input type="text" id="signupUsername" placeholder="Username">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <button id="signupSubmit">Sign Up</button>
+    </div>
+  </div>
+
+    <section id="todo" style="display:none;">
+  <div class="to-doapp">
+    <h2>To-Do LIST <img src="../images/icon.png" alt=""></h2>
+    <div class="row">
+      <input type="text" placeholder="Add your task" id="inputBox">
+      <button class="btn" onclick="addTask()">Add</button>
+    </div>
+    <ul id="listcont"></ul>
+  </div>
+</section>
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>
